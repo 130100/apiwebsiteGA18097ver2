@@ -102,7 +102,7 @@ function agregarProductos() {
 			description: descripcionTxt
 		}
 
-		fetch('https://retoolapi.dev/t9lCjr/productos', {
+		fetch('https://retoolapi.dev/bivL0y/productos/', {
 			method: "POST", body: JSON.stringify(nuevoProducto), headers: { 'Accept': 'application/json', 'Content-type': 'application/json; charset=UTF-8', }
 		}).then(response => response.json()).then(data => {productos = data; obtenerProductos()});
 		alert("Se ha agregado el producto de manera correcta");
@@ -111,7 +111,7 @@ function agregarProductos() {
 		
 var iden;
 function eliminarProductos(iden) {
-	fetch('https://retoolapi.dev/t9lCjr/productos/'+iden, { method: "DELETE" })
+	fetch('https://retoolapi.dev/bivL0y/productos/'+iden, { method: "DELETE" })
 		.then(response => response.json())
 		.then(data =>productos = data);
 		obtenerProductos();
